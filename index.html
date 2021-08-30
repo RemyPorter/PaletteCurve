@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/sylvester.js"></script>
+    <script src="libraries/complex.js"></script>
+    <script src="https://unpkg.com/culori"></script>
+  </head>
+
+  <body>
+    <p>This is a little experiment in generating color palettes by doing geometric transforms in colorspace.</p>
+    <p>Pick four color points. These are your "starting" points colors. These colors will be rotated around an axis
+      defined by the two control points that you pick.
+    </p>
+    <p>These transforms are done in LAB space, specifically with a D65 illuminant.</p>
+    <section style="border: 1px solid black">
+      <label>Color Points:</label>
+      <input type="color" id="cp0" value="#FF0000">
+      <input type="color" id="cp1" value="#00FF00">
+      <input type="color" id="cp2" value="#0000FF">
+      <input type="color" id="cp3" value="#FFFF00">
+    </section>
+    <section style="border: 1px solid black">
+      <label>Control Points:</label>
+      <input type="color" id="end0" value="#000000">
+      <input type="color" id="end1" value="#FFFFFF">
+      <label for="rot">Speed:</label>
+      <input type="number" id="rot" min="0" max="6.283185307179586" step="0.1" value="1">
+    </section>
+    <script src="sketch.js"></script>
+  </body>
+</html>
